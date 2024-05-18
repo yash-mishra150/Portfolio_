@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Karantina:wght@300;400;700&display=swap');
+
+body{
+    @apply bg-black text-white;
+}
+.katarina{
+  font-family: var(--font-katarina);
+}
+
+.roboto{
+  font-family: var(--font-roboto);
+  font-weight: 400;
+}
+
+.poppins{
+  font-family: var(--font-poppins);
+}
