@@ -70,7 +70,7 @@ function MainPage() {
 
             <footer className='bg-white mt-[5vh] p-[5vh] text-black'>
                 <Image src={logo_dark} alt="logo" className='-mt-[7vh]' />
-                <div className="flex justify-around">
+                <div className="md:flex justify-around">
                     <div>
                         <h1 className='poppins'>Certifications:</h1>
                         <ul className='roboto text-neutral-500'>
