@@ -34,19 +34,19 @@ const NavBar = ({ logo, skills, projects, about}) => {
             <div className={`${isOpen ? '' : 'hidden'} bg-white w-auto md:block md:w-auto rounded md:mx-[8vh] mx-[2vh] `}>
                 <ul className="font-medium flex flex-col p-4 md:p-0 md:justify-around md:space-x-8 rtl:space-x-reverse md:border-0 md:bg-black md:flex-row">
                     <li>
-                        <a href='' className="block py-2 px-3 text-gray-900 md:text-white rounded hover:bg-blue-700 hover:text-white md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-blue-700 dark:hover:text-white md:dark:hover:bg-transparent" aria-current="page">Home</a>
+                        <a href='' className="block py-2 px-3 text-gray-900 md:text-white rounded hover:bg-blue-700 hover:text-white md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-blue-700 dark:hover:text-white md:dark:hover:bg-transparent" aria-current="page">Home</a>
                     </li>
                     <li>
-                        <a href={`#${about}`} className="block py-2 px-3 text-gray-900 md:text-white hover:text-white rounded hover:bg-blue-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-blue-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+                        <a href={`#${about}`} className="block py-2 px-3 text-gray-900 md:text-white hover:text-white rounded hover:bg-blue-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-blue-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
                     </li>
                     <li>
                         <a href="#" className="md:block hidden "><Image src={logo} className="h-[16vh] -mt-[6vh]" alt="logo" /></a>
                     </li>
                     <li>
-                        <a href={`#${skills}`} className="block hover:text-white py-2 px-3 text-gray-900 md:text-white rounded hover:bg-blue-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-blue-700 dark:hover:text-white md:dark:hover:bg-transparent">Skills</a>
+                        <a href={`#${skills}`} className="block hover:text-white py-2 px-3 text-gray-900 md:text-white rounded hover:bg-blue-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-blue-700 dark:hover:text-white md:dark:hover:bg-transparent">Skills</a>
                     </li>
                     <li>
-                        <a href={`#${projects}`} className="block hover:text-white py-2 px-3 text-gray-900 md:text-white rounded hover:bg-blue-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-blue-700 dark:hover:text-white md:dark:hover:bg-transparent">Projects</a>
+                        <a href={`#${projects}`} className="block hover:text-white py-2 px-3 text-gray-900 md:text-white rounded hover:bg-blue-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-blue-700 dark:hover:text-white md:dark:hover:bg-transparent">Projects</a>
                     </li>
                 </ul>
             </div>
