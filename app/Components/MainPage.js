@@ -11,8 +11,10 @@ import ProjectCarousel from './projectcarousel';
 import logo_dark from '../../assests/logo_dark.svg';
 import Socials from './socials';
 import Navbar from './Navbar';
-function MainPage() {
+import usePageVisibility from './backsoon';
 
+function MainPage() {
+    usePageVisibility('Portfolio', 'Come Back :(');
     return (
         <div className=''>
             <Particles
