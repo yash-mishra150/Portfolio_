@@ -12,8 +12,28 @@ import logo_dark from '../../assests/logo_dark.svg';
 import Socials from './socials';
 import Navbar from './Navbar';
 import usePageVisibility from './backsoon';
+import { motion } from 'framer-motion';
 
 function MainPage() {
+    const sentence = "SKILLS";
+    const text = "PROJECTS";
+    const letters = Array.from(sentence);
+    const letters1 = Array.from(text);
+    const containerVariants = {
+        hidden: { opacity: 1 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1,
+            },
+        },
+    };
+
+    const letterVariants = {
+        hidden: { opacity: 0, y: -50 },
+        visible: { opacity: 1, y: 0 },
+    };
+
     usePageVisibility('Portfolio', 'Come Back :(');
     return (
         <div className=''>
@@ -22,8 +42,8 @@ function MainPage() {
                 quantity={100}
             />
 
-            
-            <Navbar logo={logo} about='about' skills='skills' projects='projects'/>
+
+            <Navbar logo={logo} about='about' skills='skills' projects='projects' />
             <section className='text-start leading-none px-[10vw]'>
                 <div className=" flex flex-row justify-center katarina mt-[3vh] text-[27vw]">
                     YASH<span className='ml-10'>{" "}MISHRA</span>
@@ -46,26 +66,85 @@ function MainPage() {
                 </div>
             </section>
             <div id='about'></div>
-            <section  className='mt-[30vh] px-[10vw] '>
-                <h1 className='poppins justify-center flex  lg:block lg:justify-start  tracking-widest font-normal text-5xl '>About Me</h1>
-                <div className='mt-[3vh] lg:flex justify-around gap-10 place-items-center'>
-                    <div className='roboto text-center lg:text-left text-2xl md:text-3xl '>
-                        I&apos;m a passionate <p className='inline text-red-300'>Computer Science student</p> at Ajay Kumar Garg Engineering College, excelling in <div className='inline text-red-300'>competitive programming <p className=' inline text-white'>and</p> full-stack development</div>. Skilled in <p className='inline text-red-300'>C++</p>, <p className='inline text-red-300'>Java</p>, and <p className='inline text-red-300'>Python</p>, I love solving tough problems and creating innovative apps to make a big impact in tech.
-                    </div>
-                    <div className='lg:block lg:mt-auto mt-[5vh] flex lg:justify-start justify-center'><Image className='lg:max-h-[40vh] lg:max-w-[40vh] max-h-[50vh] max-w-[50vw]  rounded-full border-2 border-white' src={MyPhoto} alt='photo' /></div>
+            <motion.section
+                className="mt-[30vh] px-[10vw]"
+
+            >
+                <motion.h1
+                    initial={{ opacity: 0, x: -100 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ amount: 0.1 }}
+                    transition={{ duration: 1 }}
+                    className="poppins justify-center flex lg:block lg:justify-start tracking-widest font-normal text-5xl">
+                    About Me
+                </motion.h1>
+                <div
+                    className="mt-[3vh] lg:flex justify-around gap-10 place-items-center">
+                    <motion.div
+                        initial={{ opacity: 0, x: -100 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ amount: 0.1 }}
+                        transition={{ duration: 1 }}
+                        className="roboto text-center lg:text-left text-2xl md:text-3xl">
+                        I&apos;m a passionate{' '}
+                        <p className="inline text-red-300">Computer Science student</p> at Ajay
+                        Kumar Garg Engineering College, excelling in{' '}
+                        <div className="inline text-red-300">
+                            competitive programming <p className="inline text-white">and</p> full-stack development
+                        </div>
+                        . Skilled in <p className="inline text-red-300">C++</p>,{' '}
+                        <p className="inline text-red-300">Java</p>, and{' '}
+                        <p className="inline text-red-300">Python</p>, I love solving tough
+                        problems and creating innovative apps to make a big impact in tech.
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0, x: 100 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ amount: 0.1 }}
+                        transition={{ duration: 1 }}
+                        className="lg:block lg:mt-auto mt-[5vh] flex lg:justify-start justify-center">
+                        <Image
+                            className="lg:max-h-[40vh] lg:max-w-[40vh] max-h-[50vh] max-w-[50vw] rounded-full border-2 border-white"
+                            src={MyPhoto}
+                            alt="photo"
+                        />
+                    </motion.div>
                 </div>
-            </section>
-            <section id='skills' className='mt-[20vh] justify-center flex  '>
-                <h1 className='katarina mx-[2vw] tracking-widest text-[18vw]'>SKILLS</h1>
+            </motion.section>
+            <section id="skills" className="mt-[20vh] justify-center flex">
+                <motion.h1
+                    className="katarina mx-[2vw] tracking-widest text-[18vw]"
+                    variants={containerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ amount: 0.1 }}
+                >
+                    {letters.map((letter, index) => (
+                        <motion.span key={index} variants={letterVariants}>
+                            {letter}
+                        </motion.span>
+                    ))}
+                </motion.h1>
             </section>
             <SkillsCarousel />
-            
-            <section id='projects'  className='mt-[20vh] flex justify-center px-[10vw] '>
-                <h1   className='katarina mx-[2vw] tracking-widest text-[18vw]'>PROJECTS</h1>
-                
+
+            <section id='projects' className='mt-[20vh] flex justify-center px-[10vw] '>
+                <motion.h1 className='katarina mx-[2vw] tracking-widest text-[18vw]'
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ amount: 0.1 }}>
+                    {letters1.map((letter, index) => (
+                        <motion.span key={index} variants={letterVariants}>
+                            {letter}
+                        </motion.span>
+                    ))}
+                </motion.h1>
+
             </section>
-            
-            <div  className='px-[10vw]'>
+
+            <div className='px-[10vw]'>
                 <ProjectCarousel />
             </div>
 
@@ -81,7 +160,7 @@ function MainPage() {
                         </ul>
                     </div>
                     <div>
-                        <Socials/>
+                        <Socials />
                     </div>
                 </div>
             </footer>
