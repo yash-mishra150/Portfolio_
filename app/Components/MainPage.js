@@ -13,6 +13,7 @@ import Socials from './socials';
 import Navbar from './Navbar';
 import usePageVisibility from './backsoon';
 import { motion } from 'framer-motion';
+import { IoIosArrowDropupCircle } from "react-icons/io";
 
 function MainPage() {
     const sentence = "SKILLS";
@@ -37,6 +38,7 @@ function MainPage() {
     usePageVisibility('Portfolio', 'Come Back :(');
     return (
         <div className=''>
+            <div id='home'/>
             <Particles
                 className=" fixed inset-0 -z-10 animate-fade-in"
                 quantity={100}
@@ -44,7 +46,7 @@ function MainPage() {
 
 
             <Navbar logo={logo} about='about' skills='skills' projects='projects' />
-            <section className='text-start leading-none px-[10vw]'>
+            <section  className='text-start leading-none px-[10vw]'>
                 <div className=" flex flex-row justify-center katarina mt-[3vh] text-[27vw]">
                     YASH<span className='ml-10'>{" "}MISHRA</span>
                 </div>
@@ -128,7 +130,8 @@ function MainPage() {
                 </motion.h1>
             </section>
             <SkillsCarousel />
-
+            
+            
             <section id='projects' className='mt-[20vh] flex justify-center px-[10vw] '>
                 <motion.h1 className='katarina mx-[2vw] tracking-widest text-[18vw]'
                 variants={containerVariants}
@@ -147,7 +150,9 @@ function MainPage() {
             <div className='px-[10vw]'>
                 <ProjectCarousel />
             </div>
-
+            <a href={`#home`} className='flex justify-end mr-[5vw] h-[5vh]'>
+                <IoIosArrowDropupCircle size={35} fill='white' />
+            </a>
 
             <footer className='bg-white mt-[5vh] p-[5vh] text-black'>
                 <Image src={logo_dark} alt="logo" className='-mt-[7vh]' />
