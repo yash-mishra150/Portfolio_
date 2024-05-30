@@ -37,7 +37,7 @@ function MainPage() {
 
     usePageVisibility('Portfolio', 'Come Back :(');
     return (
-        <div className=''>
+        <div className='overflow-x-hidden'>
             <div id='home'/>
             <Particles
                 className=" fixed inset-0 -z-10 animate-fade-in"
